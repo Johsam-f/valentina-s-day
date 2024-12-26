@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon1.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+
+    <title>Happy Birthday</title>
+</head>
+
+<body>
+
+    <!-- Welcome Screen -->
+    <section id="welcome">
+        <h1>Happy Birthday, Valentina!</h1>
+        <button onclick="scrollToSection('gallery')">Scroll Down for Surprises!</button>
+
+        <div id="audio-controls">
+            <button id="play-pause" onclick="togglePlay()">Play</button>
+            <input type="range" id="progress-bar" value="0" min="0" max="100" step="1">
+            <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+        </div>
+
+        <audio id="birthday-song" src="anne-marie-birthday.mp3"></audio>
+    </section>
+
+
+    <!-- Photo Gallery -->
+    <section id="gallery">
+        <h2> Time Flies</h2>
+        <div class="gallery">
+            <a href="photo1.jpg"><img src="photo1.jpg" alt="Memory 1"></a>
+            <a href="photo2.jpg"><img src="photo2.jpg" alt="Memory 2"></a>
+            <a href="photo3.jpg"><img src="photo3.jpg" alt="Memory 3"></a>
+            <a href="photo4.jpg"><img src="photo4.jpg" alt="Memory 4"></a>
+            <a href="photo5.jpg"><img src="photo5.jpg" alt="Memory 5"></a>
+            <a href="photo6.jpg"><img src="photo6.jpg" alt="Memory 6"></a>
+            <a href="photo7.jpg"><img src="photo7.jpg" alt="Memory 7"></a>
+            <a href="photo8.jpg"><img src="photo8.jpg" alt="Memory 8"></a>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section id="message">
+        <h2>Happy birthday my love</h2>
+        <p>Dear Valentina,</p>
+        <p>Happy birthday to the love of my life. You light up my world in ways I never thought possible. Today and
+            every day, I celebrate you and the love we share </p>
+        <p>
+            On your day, I want you to know how much you mean to me. You're my partner, best friend, and soulmate. Here
+            is to another year of adventures together.
+        </p>
+        <br>
+        <p>Yours,</p>
+        <p>Johsam😘😘</p>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

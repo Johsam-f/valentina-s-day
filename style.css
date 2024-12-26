@@ -1,0 +1,203 @@
+/* General Styles */
+* {
+    font-style: italic;
+    font-family: "Sofia", cursive;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+    /*font-family: 'Arial', sans-serif;*/
+    line-height: 1.6;
+}
+
+/* Welcome Section */
+#welcome {
+    height: 100vh;
+    background: url('birthday-bg.jpg') no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);*/
+    text-shadow: 0 4px 3px #ff0000, 0 6px 5px #00f;
+}
+
+#welcome h1 {
+    font-size: 3em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#welcome button {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #ff7eb3;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#welcome button:hover {
+    background: #ff5180;
+}
+
+/* Photo Gallery */
+#gallery {
+    position: relative;
+    text-align: center;
+    padding: 50px;
+    background: url('photo8.jpg') no-repeat center/cover;
+}
+
+/*audio controls*/
+
+#audio-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#audio-controls button {
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    /* Vibrant pink */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Sofia', sans-serif;
+}
+
+#audio-controls input[type="range"] {
+    flex-grow: 1;
+    -webkit-appearance: none;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+#audio-controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #ff69b4;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#audio-controls span {
+    font-family: 'Sofia', sans-serif;
+    font-size: 14px;
+}
+
+
+/*for a dim background*/
+
+/*#gallery::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+
+}
+
+#gallery * {
+    position: relative;
+    z-index: 2;
+}
+*/
+
+#gallery h2 {
+    font-size: 2em;
+    color: #1a0f0b;
+    /*color: #333;*/
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Message Section */
+#message {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    color: #444;
+    /*font-family: 'Cursive', sans-serif;*/
+}
+
+#message h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff5180;
+    text-shadow: 0 4px 2px #1e20b4;
+}
+
+#message p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.sofia-regular {
+    font-family: "Sofia", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Balloons */
+.balloon {
+    position: absolute;
+    bottom: -50px;
+    width: 50px;
+    height: 70px;
+    background: radial-gradient(circle, #ff7eb3, #ff5180);
+    border-radius: 50%;
+    animation: floatUp 5s ease-in-out infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100vh);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
